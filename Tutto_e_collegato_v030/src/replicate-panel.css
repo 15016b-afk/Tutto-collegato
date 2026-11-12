@@ -1,0 +1,13 @@
+/* v0.17 - estensione locale, senza modificare le regole della v0.16 */
+#tec-app .leaf-mass-form textarea{display:block;width:100%;min-height:108px;max-width:100%;resize:vertical;border:1px solid #ded3d9;background:#fffdfa;border-radius:8px;padding:11px;color:#4c4149;font-family:inherit;font-size:12px;line-height:1.55}
+#tec-app .leaf-mass-form textarea:focus-visible{outline:3px solid #e8af4e;outline-offset:2px}
+#tec-app .rep-metric{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:8px 0;border-bottom:1px solid #ebdce3}
+#tec-app .rep-metric strong{white-space:nowrap;font-variant-numeric:tabular-nums;color:#793a64}
+#tec-app .rep-metric span{font-size:11px}
+#tec-app .rep-result-label{font-size:10px;letter-spacing:.05em;font-weight:800;color:#8d466f;padding:5px 0 10px}
+#tec-app .rep-sample-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:11px}
+#tec-app .rep-sample-table th,#tec-app .rep-sample-table td{padding:8px 4px;border-bottom:1px solid #ebdce3;text-align:right;font-variant-numeric:tabular-nums}
+#tec-app .rep-sample-table th:first-child,#tec-app .rep-sample-table td:first-child{text-align:left}
+#tec-app .rep-sample-table caption{text-align:left;font-size:11px;padding-bottom:6px}
+#tec-app .rep-sample-table [data-check="true"]{color:#aa3c3c;font-weight:800}
+@media(max-width:480px){#tec-app .rep-metric{align-items:flex-start;flex-direction:column;gap:2px}#tec-app .rep-sample-table th,#tec-app .rep-sample-table td{font-size:10px;padding:7px 2px}}

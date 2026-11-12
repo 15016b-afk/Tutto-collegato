@@ -1,0 +1,9 @@
+#tec-app .micro-history{border-top:1px solid #e8dfe4;margin:13px 0 0;padding-top:13px}
+#tec-app .micro-history h4{font-size:13px;font-weight:750;line-height:1.35;letter-spacing:0;margin:0 0 6px}
+#tec-app .micro-history-note{font-size:10px;color:#685a67;line-height:1.6;margin:0 0 8px}
+#tec-app .micro-history-table{width:100%;border-collapse:collapse;font-size:10px;table-layout:fixed}
+#tec-app .micro-history-table th,#tec-app .micro-history-table td{border-bottom:1px solid #eae3e7;padding:7px 3px;text-align:right;vertical-align:top;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+#tec-app .micro-history-table th:first-child,#tec-app .micro-history-table td:first-child{text-align:left;width:40%}
+#tec-app .micro-history-table thead th{font-size:9px;color:#806a79;font-weight:700}
+#tec-app .micro-history-partial{font-size:10px;padding:8px;background:#fcf3e6;border:1px solid #ead5bc;border-radius:7px;color:#83552a;margin-top:8px}
+#tec-app .micro-history-fine{font-size:10px;color:#766673;line-height:1.6;margin-top:10px}

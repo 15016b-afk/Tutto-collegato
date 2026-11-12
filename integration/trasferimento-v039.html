@@ -1,0 +1,6 @@
+<!-- FACOLTATIVO: aggiungi temporaneamente questo widget HTML nella stessa pagina WordPress che esegue v0.39. Non sostituisce il gioco. -->
+<button id="tec-old-export" type="button">Esporta la mia vasca v0.39</button>
+<p id="tec-old-status" role="status"></p>
+<script>
+(function(){const b=document.getElementById('tec-old-export'),s=document.getElementById('tec-old-status');b.addEventListener('click',()=>{try{let v;if(window.__TEC_TEST__?.getState)v=window.__TEC_TEST__.getState();else {const raw=localStorage.getItem('tec_ecosistema_proto_01');if(!raw)throw Error('Nessun salvataggio trovato su questa pagina.');v=JSON.parse(raw);}const u=URL.createObjectURL(new Blob([JSON.stringify(v,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='ecosistema-v039-giorno-'+v.day+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);s.textContent='Copia esportata. Apri la nuova app e seleziona Importa vasca JSON.';}catch(e){s.textContent=e.message;}});})();
+</script>

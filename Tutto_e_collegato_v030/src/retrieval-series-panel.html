@@ -1,0 +1,25 @@
+<details class="litter-protocol" id="retrievalSeriesSection">
+ <summary>Serie di recuperi della lettiera <small>PIÙ DATE · REPliche INDIPENDENTI · DATI DICHIARATI</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note"><b>Una fotografia per ogni data di recupero, non un'animazione della decomposizione.</b> Inserisci almeno due campioni indipendenti per data e almeno due date. Una riga rappresenta una singola unità campionaria ritirata a quel giorno, non la stessa foglia pesata e reimmersa. Scenari e pesate esterne restano separati dalla vasca virtuale.</p>
+  <form id="retrievalSeriesForm" class="leaf-mass-form" autocomplete="off">
+   <label for="seriesSpecies">Specie botanica del confronto
+    <select id="seriesSpecies"><option value="alnus_glutinosa">Alnus glutinosa · ontano nero</option><option value="quercus_robur">Quercus robur · quercia comune</option></select>
+   </label>
+   <label for="seriesOrigin">Provenienza delle osservazioni
+    <select id="seriesOrigin"><option value="scenario">Scenario ipotetico dichiarato</option><option value="external">Pesate dichiarate di campioni esterni</option></select>
+   </label>
+   <label for="seriesBasis">Base analitica condivisa
+    <select id="seriesBasis"><option value="DM">DM · massa secca</option><option value="AFDM">AFDM · massa priva di ceneri</option></select>
+   </label>
+   <label for="seriesRows">Una riga per unità: giorno; massa iniziale (g); massa recuperata (g)
+    <textarea id="seriesRows" rows="5" spellcheck="false" placeholder="Formato: giorno; iniziale; recuperata&#10;Due o più unità indipendenti per ciascun giorno; nessun dato precompilato" required></textarea>
+   </label>
+   <p class="matter-muted">Usa <b>;</b> o TAB per separare i campi; virgola/punto per i decimali. Non mischiare esperimenti, siti, trattamenti, gruppi di controllo, preparazioni o basi DM/AFDM differenti. Per AFDM, la stima iniziale richiede unità di riferimento comparabili perché l'incenerimento è distruttivo. I dati non vengono conservati nel salvataggio della vasca.</p>
+   <button type="submit" class="secondary full">Confronta i giorni campionati</button>
+   <button type="reset" class="leaf-mass-clear">Cancella la serie</button>
+  </form>
+  <div id="retrievalSeriesResult" class="leaf-mass-result" aria-live="polite"><p>Nessun campione dichiarato. Non sono prodotti valori né curve di decomposizione.</p></div>
+  <button type="button" class="secondary full" id="retrievalSeriesEvidenceBtn">Metodologia, fonti e limiti ↗</button>
+ </div>
+</details>

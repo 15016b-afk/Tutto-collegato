@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+#tec-app,*:where(#tec-app *){box-sizing:border-box}html,body{margin:0;min-height:100%;background:#f9f7ef;color:#382c3d}#tec-app{font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:1.45;isolation:isolate}#tec-app button,#tec-app select,#tec-app input{font:inherit}#tec-app button{cursor:pointer}#tec-app button:disabled{cursor:not-allowed;opacity:.38}#tec-app h1,#tec-app h2,#tec-app h3,#tec-app h4,#tec-app p{margin:0}#tec-app h1,#tec-app h2,#tec-app h3,#tec-app h4{font-family:Outfit,'DM Sans',sans-serif;line-height:1.06;letter-spacing:-.035em}#tec-app em{font-style:normal;color:#a7457d}#tec-app a{color:inherit}#tec-app :focus-visible{outline:3px solid #e8af4e;outline-offset:3px}#tec-app [hidden]{display:none!important}#tec-app .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}#tec-app .topbar{min-height:76px;padding:16px clamp(18px,3.4vw,58px);border-bottom:1px solid #e8e1d8;display:flex;align-items:center;gap:30px;justify-content:space-between;background:#f9f7ef}#tec-app .back{text-decoration:none;font-size:12px;letter-spacing:.05em;color:#695b67;white-space:nowrap}#tec-app .brand{display:flex;gap:10px;align-items:center;font-family:Outfit,sans-serif;font-weight:800;font-size:19px;letter-spacing:-.03em;line-height:1}#tec-app .brand em{color:#a7457d}#tec-app .brand small{display:block;font-family:'DM Sans',sans-serif;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:8px;margin-top:6px}#tec-app .brand-icon{font-size:30px;color:#e3b141}#tec-app .top-actions{display:flex;gap:18px;align-items:center}#tec-app .buildtag{background:#e9dbed;color:#8b477a;padding:8px 12px;border-radius:99px;font-size:10px;font-weight:800;letter-spacing:.09em;white-space:nowrap}#tec-app .quietbtn{background:none;border:0;border-bottom:1px solid #766571;color:#685b67;font-size:12px;padding:5px 0;white-space:nowrap}#tec-app .layout{display:grid;grid-template-columns:minmax(235px,285px) minmax(450px,1fr) minmax(245px,288px);max-width:1920px;margin:auto;min-height:calc(100vh - 124px)}#tec-app .sidebar,#tec-app .inspector{padding:26px 23px 23px;background:#f7f3ed}#tec-app .sidebar{border-right:1px solid #e8e0d7}#tec-app .sidebar-top{margin-bottom:24px}#tec-app .overline{letter-spacing:.16em;font-size:9px;font-weight:800;text-transform:uppercase;color:#a04d80;margin-bottom:10px}#tec-app h1{font-size:34px;font-weight:800;margin:9px 0 10px}#tec-app .intro{font-size:12px;color:#7c7078;line-height:1.65;max-width:255px}#tec-app .formrow{display:grid;gap:5px;margin-bottom:12px}#tec-app label{font-size:11px;font-weight:700}#tec-app select{width:100%;background:#fffdfa;border:1px solid #ded3d9;border-radius:8px;color:#4c4149;padding:9px 10px;font-size:11px}#tec-app .phasehead{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #e4dce1;padding-top:22px;margin-top:20px;margin-bottom:12px;letter-spacing:.1em;text-transform:uppercase;font-size:10px;font-weight:800}#tec-app .phasehead strong{color:#ad5385;font-size:10px}#tec-app .toolgroup{padding:14px 0;border-top:1px solid #e7dfe1}#tec-app .grouptitle{font-size:12px;font-weight:800;margin-bottom:9px;display:flex;gap:9px;align-items:center}#tec-app .info-dot{color:#9b5c85;background:none;border:0;font-size:14px;padding:0}#tec-app .toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}#tec-app .tool{border:1px solid #e1d3db;border-radius:8px;background:#fffcf7;padding:9px 6px;color:#635260;font-size:11px;font-weight:700;text-align:center;display:flex;justify-content:center;gap:6px;align-items:center;min-height:38px}#tec-app .tool i{width:11px;height:11px;border-radius:100%;background:var(--dot)}#tec-app .tool.active{background:#a94d80;color:white;border-color:#a94d80}#tec-app .subtools{margin-top:11px}#tec-app .subtools label{display:flex;justify-content:space-between;color:#746770}#tec-app input[type="range"]{accent-color:#ae4f82;width:100%;height:22px}#tec-app .hint{font-size:11px;color:#847880;line-height:1.6;margin-top:7px}#tec-app .actionpair{display:grid;grid-template-columns:1fr 1fr;gap:7px}#tec-app .secondary{border:1px solid #d8bed0;color:#8c4674;background:#fffdfa;border-radius:8px;padding:9px 7px;font-weight:700;font-size:11px}#tec-app .secondary.full{width:100%;margin-top:10px}#tec-app .secondary:hover:not(:disabled),#tec-app .tool:hover:not(:disabled){border-color:#9c5582;background:#f8ebf3;color:#6f3562}#tec-app .launch{margin-top:17px;width:100%;border:0;background:#a5497b;color:#fff;min-height:49px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-weight:800;box-shadow:0 8px 24px #a5497b25}#tec-app .launch:hover{background:#873967}#tec-app .launch span{font-size:22px}#tec-app .sidebar-footer{display:flex;align-items:center;justify-content:space-between;font-size:10px;color:#7b6d77;margin-top:20px}#tec-app .textbtn{border:0;background:none;color:#a44b7c;font-weight:800;font-size:11px;padding:4px 0}#tec-app .world{padding:26px clamp(14px,2.8vw,40px) 28px;min-width:0;background:radial-gradient(circle at 50% 35%,#fffdfa,#faf8f1 85%)}#tec-app .world-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:23px}#tec-app h2{font-size:clamp(24px,2.3vw,35px);margin:4px 0 7px}#tec-app .period{color:#deaa42}#tec-app .world-head p{font-size:12px;color:#80767b;max-width:590px}#tec-app .switcher{display:flex;border:1px solid #e5d9df;padding:3px;border-radius:30px;white-space:nowrap;background:#f8f4ef}#tec-app .switcher button{padding:7px 12px;border:0;background:none;border-radius:30px;font-size:11px;font-weight:700;color:#7a6f75}#tec-app .switcher button.active{background:#493242;color:white}#tec-app .tank-wrap{background:#fff;border:1px solid #e4e1dd;border-radius:18px;padding:14px;box-shadow:0 18px 55px #4c354112}#tec-app .tank-top{display:flex;align-items:center;justify-content:space-between;padding:2px 3px 12px;gap:10px}#tec-app .tanklabel{font-weight:800;font-size:10px;letter-spacing:.1em;color:#7a6377}#tec-app .tanklabel small{font-size:10px;font-weight:500;letter-spacing:0;color:#a39aa0;margin-left:6px}#tec-app .tankstatus{font-weight:800;font-size:9px;letter-spacing:.09em;border-radius:30px;padding:6px 10px;background:#f3e7ea;color:#9b4773;white-space:nowrap}#tec-app .tank-frame{position:relative;overflow:hidden;border-radius:9px;background:#e5f4ef;border:8px solid #634b62;border-bottom:13px solid #59435b;box-shadow:0 10px 10px #51395124, inset 0 1px 5px #ffffff99;aspect-ratio:1000/580}#tec-app .tank-svg{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}#tec-app .tank-frame-corner{position:absolute;top:0;width:20px;height:20px;background:linear-gradient(90deg,#ffffff35,transparent);pointer-events:none}#tec-app .tank-frame-corner.tr{right:0}#tec-app .bottomscene{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,195px);gap:14px;margin-top:16px}#tec-app .bottomscene>div:first-child{border:1px solid #e5e0df;background:#fffdfa;border-radius:12px;padding:14px;min-width:0}#tec-app .tanklabel.dark{color:#705d6e}#tec-app .top-svg{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair;margin-top:6px}#tec-app .timebox{background:#f7e7ec;border-radius:12px;padding:16px 12px;display:flex;flex-direction:column;justify-content:center}#tec-app .timebig{font-family:Outfit,sans-serif;font-size:42px;font-weight:800;color:#8f4176;font-variant-numeric:tabular-nums;line-height:1.1}#tec-app .timebig small{font-size:12px;font-weight:600}#tec-app .timebtns{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:11px 0 8px}#tec-app .timebtns button{border:1px solid #e1bdd0;background:#fff9fb;color:#913a70;font-weight:800;border-radius:8px;padding:8px 0;font-size:11px}#tec-app .timebtns button:hover:not(:disabled){background:#a84c80;color:white}#tec-app .fine{font-size:9px;color:#9f718d;line-height:1.5}#tec-app .legend{display:flex;align-items:center;gap:16px;padding:14px 3px;font-size:10px;color:#877d81;flex-wrap:wrap}#tec-app .legdot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:3px}#tec-app .legend-tail{margin-left:auto}#tec-app .inspector{border-left:1px solid #e8e0d7}#tec-app h3{font-size:25px;font-weight:800;margin:5px 0 8px}#tec-app .mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:24px}#tec-app .mini-stats>div{border:1px solid #e8dfe4;background:#fffdfa;border-radius:10px;padding:12px}#tec-app .mini-stats>div:nth-child(3){grid-column:1/3}#tec-app .mini-stats small{display:block;font-size:8px;font-weight:800;letter-spacing:.07em;color:#9b8090}#tec-app .mini-stats strong{display:block;font-family:Outfit,sans-serif;font-size:22px;margin-top:4px;color:#584051}#tec-app .mini-stats strong span{font-size:12px;color:#b07a9d}#tec-app .inspect-panel,#tec-app .lab-panel{margin-top:22px;background:#fffdfa;border:1px solid #e8dfe4;border-radius:13px;padding:16px;min-height:205px}#tec-app .inspect-empty{height:174px;display:flex;align-items:center;text-align:center;flex-direction:column;justify-content:center;gap:10px}#tec-app .inspect-empty span{font-size:32px;color:#ac7da0}#tec-app .inspect-empty b{font-size:12px;color:#604358}#tec-app .inspect-empty p{max-width:200px;color:#93828e;font-size:11px;line-height:1.6}#tec-app .inspect-title{font-size:19px;margin-bottom:8px}#tec-app .inspect-photo{width:100%;height:115px;object-fit:contain;margin:5px 0 12px}#tec-app .inspect-copy{font-size:11px;line-height:1.7;color:#766c76}#tec-app .provenance{border-top:1px solid #efe2e9;padding-top:9px;margin-top:13px;color:#8f6283;font-size:10px}#tec-app h4{font-size:18px;margin:10px 0 20px}#tec-app .labrow{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #eee4e7;padding:9px 0;font-size:11px}#tec-app .labrow strong{color:#975882;text-align:right;font-size:10px}#tec-app .scientific-note{background:#f8eff2;border-radius:9px;font-size:11px;padding:13px;line-height:1.65;color:#785d70;margin-top:17px}#tec-app .diary{margin-top:25px}#tec-app .diary-title{display:flex;align-items:center;justify-content:space-between;font-size:11px;font-weight:800;letter-spacing:.07em;border-bottom:1px solid #e5d8df;padding-bottom:10px}#tec-app .diary-title small{color:#998d94;font-weight:500;letter-spacing:0;margin-left:5px}#tec-app .journal-preview{font-size:11px;line-height:1.6;color:#73616c}#tec-app .journal-entry{padding:11px 2px;border-bottom:1px solid #ece5e6}#tec-app .journal-entry strong{color:#a24d80;display:block;font-size:10px;margin-bottom:4px}#tec-app .pagefooter{max-width:1920px;margin:auto;padding:15px 28px;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:10px;letter-spacing:.05em;color:#8b7884;border-top:1px solid #ece5e5}#tec-app .pagefooter span{letter-spacing:0;text-transform:none}#tec-app .modal-layer{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:20px}#tec-app .modal-shade{position:absolute;inset:0;background:#30232cc4;backdrop-filter:blur(4px)}#tec-app .modal{position:relative;max-height:88vh;overflow:auto;background:#fffdf8;width:min(700px,100%);border-radius:16px;padding:30px;box-shadow:0 18px 80px #2118275c}#tec-app .modalclose{position:absolute;right:15px;top:12px;border:0;background:#f5e9ed;border-radius:50%;width:32px;height:32px;font-size:21px;color:#8b4775}#tec-app .modal h3{font-size:30px;margin:13px 0}#tec-app .modal p,#tec-app .modal li{font-size:13px;line-height:1.7;color:#6b6069}#tec-app .modal ul{padding-left:18px}#tec-app .modal a{color:#a44980}#tec-app .modal .modalentry{border-top:1px solid #eee3e9;padding:13px 0}#tec-app .modal .modalentry b{display:block;color:#9c5080;font-size:11px;margin-bottom:4px}#tec-app .notice{color:#9b4d78;font-weight:800;font-size:11px;margin:10px 0}#tec-app .tank-event{filter:drop-shadow(0 1px 1px #3b4a4733)}#tec-app .tank-event:hover{filter:drop-shadow(0 0 5px #ffdfb8)}#tec-app .sway{transform-box:fill-box;transform-origin:bottom center;animation:tec-sway 4.5s ease-in-out infinite alternate}#tec-app .animal{transform-box:fill-box;transform-origin:center;animation:tec-float 3s ease-in-out infinite alternate}#tec-app .float{transform-box:fill-box;transform-origin:center;animation:tec-float 4s ease-in-out infinite alternate}#tec-app .plant-img{filter:drop-shadow(0 3px 4px #3a5a4838)}@keyframes tec-sway{from{transform:rotate(-1deg)}to{transform:rotate(1.5deg)}}@keyframes tec-float{from{transform:translateY(-1px)}to{transform:translateY(3px)}}@media(max-width:1250px){#tec-app .layout{grid-template-columns:minmax(230px,260px) minmax(350px,1fr)}#tec-app .inspector{grid-column:1/-1;border-left:0;border-top:1px solid #e9dfe3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}#tec-app .mini-stats{margin-top:0}#tec-app .inspect-panel,#tec-app .lab-panel{margin-top:0}#tec-app .diary{margin-top:0}}@media(max-width:780px){#tec-app .topbar{flex-wrap:wrap;min-height:0;gap:7px 15px;padding:14px 16px}#tec-app .brand{order:-1;width:100%;font-size:17px}#tec-app .top-actions{margin-left:auto;gap:7px}#tec-app .buildtag{font-size:8px}#tec-app .quietbtn{font-size:11px}#tec-app .layout{display:block}#tec-app .sidebar{border-right:0;border-bottom:1px solid #e5dce0;padding:20px}#tec-app .sidebar-top{margin-bottom:16px}#tec-app h1{font-size:27px}#tec-app .formrow{display:inline-grid;width:calc(50% - 5px);vertical-align:top;margin-right:7px}#tec-app .formrow:nth-of-type(3){width:100%}#tec-app .toolgroup{padding:10px 0}#tec-app .world{padding:18px 12px}#tec-app .world-head{display:block}#tec-app .switcher{display:inline-flex;margin-top:12px}#tec-app .tank-wrap{padding:7px;border-radius:13px}#tec-app .tank-frame{border-width:5px;border-bottom-width:8px}#tec-app .bottomscene{grid-template-columns:1fr}#tec-app .timebox{padding:12px;display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:5px 14px}#tec-app .timebox .overline{grid-column:1/-1}#tec-app .timebox .fine{grid-column:1/-1}#tec-app .timebig{font-size:30px}#tec-app .inspector{display:block;padding:20px}#tec-app .mini-stats{margin-top:14px}#tec-app .inspect-panel,#tec-app .lab-panel,#tec-app .diary{margin-top:16px}#tec-app .pagefooter{display:block;text-align:center}#tec-app .pagefooter span{display:block;margin:5px}}@media(prefers-reduced-motion:reduce){#tec-app .sway,#tec-app .float,#tec-app .animal{animation:none!important}#tec-app *,#tec-app *::before,#tec-app *::after{scroll-behavior:auto!important;transition:none!important}}
+/* v0.2 — esperienza semplificata: un passaggio alla volta */
+#tec-app{--violet:#62455e;--berry:#a34579;--ink:#493943;--paper:#faf7f1;--line:#e8dfe2;background:#faf7f1;color:var(--ink)}
+#tec-app .topbar{min-height:66px;padding:11px clamp(16px,2.5vw,34px);gap:18px;position:relative;z-index:3}
+#tec-app .brand{font-size:18px}#tec-app .brand-icon{font-size:27px}
+#tec-app .layout{max-width:1800px;grid-template-columns:minmax(270px,318px) minmax(0,1fr);min-height:calc(100vh - 110px);align-items:start}
+#tec-app .sidebar{min-width:0;border-right:1px solid var(--line);padding:24px 23px 22px;background:#f7f3ef;position:sticky;top:0;max-height:100vh;overflow-y:auto;scrollbar-color:#d9b8cd transparent;scrollbar-width:thin}
+#tec-app .sidebar-top{margin-bottom:14px}#tec-app h1{font-size:27px;margin:6px 0 7px;line-height:1.05}
+#tec-app .intro{font-size:11px;line-height:1.55}
+#tec-app .stepnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:14px 0 18px}
+#tec-app .stepnav button{background:#fffefa;border:1px solid #e6dce0;border-radius:10px;min-height:64px;padding:9px 3px 8px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;color:#756670;font-size:10px;font-weight:700;line-height:1.15;text-align:center}
+#tec-app .stepnav button:hover{background:#fff6fb;border-color:#ba82a7}
+#tec-app .stepnav button.is-current{background:#694662;border-color:#694662;color:#fff;box-shadow:0 3px 10px #5c335325}
+#tec-app .stepnav .step-number{font-family:Outfit,sans-serif;font-size:17px;line-height:1;font-weight:800;display:block}
+#tec-app .stepnav button.is-current .step-number{color:#ffe0ab}
+#tec-app .phasehead{padding-top:12px;margin:0 0 14px;font-size:9px}
+#tec-app .step-panel{animation:tec-appear .17s ease-out}
+#tec-app .step-kicker{font-size:10px;letter-spacing:.1em;font-weight:800;color:#a34a7d;margin-bottom:7px}
+#tec-app .step-panel h3,#tec-app .aftertools h3{font-size:24px;line-height:1.14;margin:0 0 10px;color:#433342}
+#tec-app .step-explain{color:#796c74;font-size:12px;line-height:1.62;margin:0 0 15px}
+#tec-app .step-explain.compact{font-size:11px;line-height:1.5;margin-bottom:10px}
+#tec-app .step-panel .formrow{margin:0 0 12px}
+#tec-app .step-panel .formrow label{font-size:11px}
+#tec-app .step-panel select{font-size:12px;padding:11px 12px}
+#tec-app .step-panel .toolgroup{padding:12px 0;border-top:1px solid #e4d9df}
+#tec-app .step-panel .toolgrid{gap:7px}
+#tec-app .step-panel .tool{min-height:44px;font-size:11px;padding:10px 5px}
+#tec-app .step-panel .tool.active{background:#794b71;border-color:#794b71}
+#tec-app .step-panel .grouptitle{margin-bottom:9px;font-size:12px}
+#tec-app .step-panel .subtools{margin-top:12px}
+#tec-app .next-action{width:100%;border:0;border-radius:12px;background:#9d467b;color:#fff;font-weight:800;text-align:left;min-height:49px;padding:12px 15px;margin:14px 0 4px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 5px 17px #ac598126}
+#tec-app .next-action:hover:not(:disabled){background:#7a3562}
+#tec-app .next-action span{font-size:20px}
+#tec-app .ghost-next{border:0;border-radius:8px;background:none;color:#925279;text-align:center;font-weight:700;font-size:12px;padding:12px 6px;width:100%;margin-top:10px}
+#tec-app .ghost-next:hover{background:#f8eaf1}
+#tec-app .fauna-row{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#tec-app .fauna-row .secondary{padding:12px 7px;min-height:50px;font-size:11px}
+#tec-app .recap{border:1px solid #eadce4;background:#fffefa;border-radius:12px;padding:9px 14px;margin:14px 0}
+#tec-app .recap>div{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 0;font-size:12px}
+#tec-app .recap>div+div{border-top:1px solid #f1e9eb}
+#tec-app .recap strong{text-align:right;font-size:11px}
+#tec-app .step-panel .launch{margin-top:12px}
+#tec-app .sidebar-footer{border-top:1px solid #e5dce1;padding-top:15px;margin-top:23px}
+#tec-app .world{padding:23px clamp(12px,2.7vw,38px) 25px;min-width:0}
+#tec-app .world-head{align-items:flex-start;margin-bottom:16px}
+#tec-app .world-head h2{font-size:clamp(25px,2.6vw,35px);margin:3px 0 5px}
+#tec-app .world-head p{font-size:12px;max-width:620px;line-height:1.5}
+#tec-app .command-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #e9d9e2;background:#f9eff4;padding:10px 13px;border-radius:13px;margin-bottom:12px}
+#tec-app .command-strip>div{display:flex;gap:10px;align-items:center;min-width:0}
+#tec-app .command-symbol{font-size:22px;color:#a34a7b}
+#tec-app .command-strip small{display:block;font-size:9px;font-weight:800;letter-spacing:.1em;color:#9d6283}
+#tec-app .command-strip strong{font-size:13px;color:#49314a;margin-right:10px}
+#tec-app .command-strip em{font-style:normal;font-size:11px;color:#836879}
+#tec-app .command-inspect{flex-shrink:0;border:1px solid #d8bad0;background:white;color:#865075;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:700}
+#tec-app .command-inspect.is-current{background:#67445f;color:white}
+#tec-app .tank-wrap{border-radius:18px;padding:12px}
+#tec-app .tank-top{padding-bottom:9px}
+#tec-app .tank-frame{border-width:8px;border-bottom-width:12px;border-radius:9px}
+#tec-app .tank-overlay{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);background:#fffdf6e5;color:#61465c;border:1px solid #e2cfda;border-radius:15px;box-shadow:0 6px 32px #59604a21;max-width:80%;width:310px;padding:17px;text-align:center;pointer-events:none;display:grid;gap:4px;justify-items:center}
+#tec-app .tank-overlay strong{font-size:16px;font-family:Outfit,sans-serif}
+#tec-app .tank-overlay small{font-size:11px;color:#796975}
+#tec-app .tank-overlay span{color:#c19548;font-size:25px}
+#tec-app .bottomscene{grid-template-columns:minmax(0,1fr) minmax(148px,184px);gap:12px;margin-top:13px}
+#tec-app .bottomscene>div:first-child{padding:11px}
+#tec-app .timebox{padding:12px}
+#tec-app .timebig{font-size:37px}
+#tec-app .lower-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:13px}
+#tec-app .lower-btn{border:1px solid #ead9e1;background:#fffefa;border-radius:10px;padding:11px 14px;font-size:12px;font-weight:800;color:#63495f;display:inline-flex;align-items:center;gap:7px}
+#tec-app .lower-btn:hover{background:#f9ebf3}
+#tec-app .lower-btn span{color:#977f92;font-weight:500;font-size:10px}
+#tec-app .prototype-note{margin-left:auto;font-size:10px;color:#96838f}
+#tec-app .legend{padding:14px 3px}
+#tec-app .inspector{position:fixed;z-index:15;top:18px;bottom:18px;right:18px;width:min(345px,calc(100vw - 36px));display:block;background:#fffcf8;border:1px solid #e2d0dd;border-radius:17px;padding:19px;box-shadow:0 18px 75px #3827354a;overflow:auto}
+#tec-app .drawer-title{display:flex;justify-content:space-between;align-items:center;color:#99517e;font-weight:800;font-size:10px;letter-spacing:.1em;margin-bottom:12px}
+#tec-app .drawer-title .modalclose{position:static;flex-shrink:0}
+#tec-app .mini-stats{margin:0;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+#tec-app .mini-stats>div{min-width:0;padding:8px 7px}
+#tec-app .mini-stats>div:nth-child(3){grid-column:auto}
+#tec-app .mini-stats small{font-size:8px}
+#tec-app .mini-stats strong{font-size:16px;word-break:break-word}
+#tec-app .inspect-panel,#tec-app .lab-panel{margin-top:12px;padding:14px;min-height:0}
+#tec-app .diary{margin-top:18px}
+#tec-app .tank-event{cursor:pointer}
+#tec-app .pagefooter{max-width:1800px}
+@keyframes tec-appear{from{opacity:.55;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1200px){#tec-app .layout{grid-template-columns:minmax(255px,296px) minmax(0,1fr)}#tec-app .world{padding:18px 15px}#tec-app .command-strip em{display:block}}
+@media(max-width:780px){#tec-app .layout{display:flex;flex-direction:column}#tec-app .sidebar{position:relative;top:auto;max-height:none;overflow:visible;padding:17px 17px 15px;width:100%;border-right:0;border-bottom:1px solid #e9dfe3}#tec-app .sidebar-top h1{font-size:26px}#tec-app .stepnav{grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin:12px 0}#tec-app .stepnav button{font-size:9px;padding:8px 1px;min-height:61px}#tec-app .stepnav .step-number{font-size:15px}#tec-app .world{width:100%;padding:15px 12px}#tec-app .step-panel .formrow{display:grid;width:100%;margin:0 0 10px}#tec-app .world-head{display:flex;flex-wrap:wrap;gap:8px}#tec-app .switcher{margin-top:3px}#tec-app .tank-wrap{padding:7px}#tec-app .tank-frame{border-width:5px;border-bottom-width:8px}#tec-app .command-strip{padding:9px}#tec-app .command-inspect{font-size:10px}#tec-app .bottomscene{grid-template-columns:1fr}#tec-app .timebox{display:grid;grid-template-columns:1fr 1.6fr;align-items:center}#tec-app .timebox .overline,#tec-app .timebox .fine{grid-column:1/-1}#tec-app .prototype-note{flex-basis:100%;margin-left:0}#tec-app .tank-overlay{padding:9px;gap:2px}#tec-app .tank-overlay strong{font-size:12px}#tec-app .tank-overlay small{font-size:9px}}
+@media(max-width:380px){#tec-app .stepnav{grid-template-columns:repeat(3,minmax(0,1fr))}#tec-app .command-strip{flex-wrap:wrap}#tec-app .command-strip em{font-size:10px}#tec-app .command-inspect{margin-left:auto}}
+#tec-app .mobile-quick-nav{display:none}
+@media(max-width:780px){#tec-app .mobile-quick-nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:9;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:5px;background:#533c52;border:1px solid #ffffff42;border-radius:35px;box-shadow:0 7px 30px #4933485a;width:min(295px,calc(100vw - 28px))}#tec-app .mobile-quick-nav button{border:0;border-radius:24px;background:none;color:white;padding:10px 5px;font-size:12px;font-weight:800}#tec-app .mobile-quick-nav button:last-child{background:#fceff6;color:#67445f}#tec-app{padding-bottom:64px}}
+
+/* V0.3: rapporti documentati, osservazioni volontarie, niente valori biologici presunti */
+#tec-app .observation-brief{display:flex;align-items:center;gap:12px;margin:14px 0 2px;padding:14px 16px;border:1px solid #e0e6d8;border-radius:14px;background:#f3f7ee;color:#435947}
+#tec-app .brief-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e3efdb;font-size:22px;flex:none}
+#tec-app .observation-brief>div:nth-child(2){min-width:0;flex:1}
+#tec-app .observation-brief strong{font-family:Outfit,sans-serif;font-size:14px}
+#tec-app .observation-brief p{font-size:11px;line-height:1.55;color:#65786b;margin-top:3px}
+#tec-app .observation-brief button{border:1px solid #b7c9af;color:#4b7056;background:#fffdfa;border-radius:8px;padding:9px 12px;font-size:11px;font-weight:800;flex-shrink:0}
+#tec-app .lab-relations-title{border-top:1px solid #eee1e7;margin-top:18px;padding-top:17px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;font-weight:800;letter-spacing:.05em;color:#694c62}
+#tec-app .lab-relations-title span{font-size:10px;font-weight:600;color:#9b6c87;letter-spacing:0}
+#tec-app .relation-list{display:grid;gap:10px;margin:12px 0 16px}
+#tec-app .relation{padding:12px;border:1px solid #e9dfe4;border-radius:11px;background:#fffafc;display:grid;gap:6px}
+#tec-app .relation-route{display:flex;align-items:center;gap:7px;color:#78526f;font-size:11px;font-weight:800}
+#tec-app .relation-symbol{display:grid;place-items:center;color:#597659;background:#e8efde;border-radius:8px;min-width:25px;height:25px;font-size:15px}
+#tec-app .relation-arrow{padding:0 4px;color:#be869f}
+#tec-app .relation strong{font-size:12px;color:#563f50}
+#tec-app .relation p{font-size:11px;color:#746874;line-height:1.55}
+#tec-app .relation-state{color:#7e546d;font-size:10px;font-weight:800}
+#tec-app .relation a{color:#8b4b78;font-size:10px;text-decoration:underline;text-underline-offset:2px}
+#tec-app .empty-relations{font-size:11px;color:#887886}
+#tec-app .snapshot-gallery{display:grid;gap:14px}
+#tec-app .snapshot{margin:0;border:1px solid #e8dfe4;border-radius:10px;overflow:hidden;background:white}
+#tec-app .snapshot img{width:100%;height:auto;display:block}
+#tec-app .snapshot figcaption{color:#795c6d;padding:10px 12px;font-size:11px}
+@media(max-width:1050px){#tec-app .observation-brief{flex-wrap:wrap}#tec-app .observation-brief button{margin-left:45px}}
+@media(max-width:500px){#tec-app .observation-brief{padding:12px}#tec-app .observation-brief button{margin-left:0;width:100%}}
+
+/* v0.4 — registro materiale sintetico e consultabile soltanto in Laboratorio */
+#tec-app .material-section{margin-top:17px;padding:13px 12px;background:#fbf8f1;border:1px solid #e6dfe0;border-radius:12px}
+#tec-app .material-section>.lab-relations-title{padding-top:0;margin-top:0;border:0}
+#tec-app .material-accounts{font-size:11px;color:#5d4d57;margin:7px 0 12px}
+#tec-app .matter-row{display:flex;align-items:start;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid #ede6e5}
+#tec-app .matter-row strong{color:#593d52;white-space:nowrap;font-weight:750}
+#tec-app .matter-label{font-size:9px;letter-spacing:.07em;color:#9d6689;font-weight:800;margin:8px 0}
+#tec-app .matter-muted{font-size:10px;line-height:1.5;color:#82727c;margin-top:10px}
+#tec-app .matter-divider{border-top:1px dashed #d8bdce;margin:10px 0 4px}
+
+/* v0.5 — confronto bibliografico: visivamente distinto dalla vasca */
+#tec-app .literature-section{margin-top:14px;padding:14px 12px 12px;background:#f7f1f1;border:1px solid #e5d9e3;border-radius:13px}
+#tec-app .literature-section .lab-relations-title{border-top:0;padding-top:0;margin-top:0}
+#tec-app .literature-section .lab-relations-title small{display:block;line-height:1.3;font-size:8px;letter-spacing:.05em;color:#9e748b;margin-top:4px}
+#tec-app .reference-plot{margin:9px 0}
+#tec-app .ref-empty,#tec-app .ref-disclaimer{color:#846f80;font-size:10px;line-height:1.55}
+#tec-app .ref-day{font-size:12px;color:#583b55;margin-bottom:5px}
+#tec-app .ref-day small{display:block;font-size:9px;color:#947688;margin-top:3px}
+#tec-app .ref-svg{width:100%;height:auto;display:block;overflow:visible;background:#fffcf9;border-radius:8px;margin-bottom:9px}
+#tec-app .ref-svg text{font-size:10px;fill:#7a6979}
+#tec-app .ref-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 0;font-size:11px;border-bottom:1px solid #e4dbe2}
+#tec-app .ref-row span{display:flex;align-items:center;gap:6px}
+#tec-app .ref-row i{width:9px;height:9px;display:inline-block;flex:none;border-radius:50%}
+#tec-app .ref-row strong{white-space:nowrap;color:#59384f}
+#tec-app .ref-row small{font-size:9px;font-weight:400;color:#856e7c}
+#tec-app .ref-disclaimer{margin:11px 0 7px}
+
+/* v0.6 — water balance compact informative panel */
+#tec-app .water-budget-mini{color:#7f416c;font-size:10px;line-height:1.4;font-weight:700;border-top:1px solid #e6cbd8;padding-top:8px;margin-top:4px}
+#tec-app .water-budget-mini+.fine{margin-top:6px}
+
+/* v0.7 — microvisualizzazioni sobrie, nessun dato nascosto spacciato per misura */
+.tracer-panel{padding-top:15px;border-top:1px solid #eadce1;margin-top:18px}.tracer-figure{display:flex;gap:12px;align-items:center;background:#f9f0f3;border-radius:12px;padding:12px;margin:9px 0}.tracer-figure>strong{font:700 27px/1.2 Outfit, sans-serif;color:#843d68;white-space:nowrap}.tracer-figure>span{font:400 12px/1.45 'DM Sans',sans-serif;color:#564a54}.tracer-figure small{font-size:10px;color:#766473}.leaf-elements-section{border-top:1px solid #eadce1;padding-top:18px;margin-top:18px}.element-sample{padding:10px 0;border-bottom:1px solid #eee1e6}.element-head{display:flex;align-items:baseline;justify-content:space-between;gap:7px;flex-wrap:wrap;font-size:12px}.element-head small{font-size:10px;color:#776976}.element-bar{height:7px;border-radius:5px;background:#f2e6ee;margin:8px 0}.element-bar i{display:block;height:100%;border-radius:5px;background:#a66086}.element-sample:nth-child(even) .element-bar i{background:#729f84}.element-read{font-size:11px;color:#6d5f6a}.element-read strong{font-weight:700;color:#714b67}#leafElementDetails .matter-muted{margin:12px 0;line-height:1.5}
+
+/* v0.9: laboratorio sintetico non invasivo, chiuso finché non richiesto */
+#tec-app .nitrification-section{margin:14px 0;padding:0;border:1px solid #dac9d3;border-radius:13px;background:#fbf8f6;overflow:hidden}
+#tec-app .nitrification-section summary{list-style:none;cursor:pointer;color:#65364c;font-size:13px;font-weight:750;line-height:1.4;padding:14px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#tec-app .nitrification-section summary::-webkit-details-marker{display:none}
+#tec-app .nitrification-section summary:after{content:'⌄';font-size:19px;line-height:1}
+#tec-app .nitrification-section[open] summary:after{content:'⌃'}
+#tec-app .nitrification-section summary small{font-size:9px;color:#9c6682;letter-spacing:.06em}
+#tec-app .nitrification-section summary:focus-visible{outline:3px solid #a95088;outline-offset:-3px}
+#tec-app .nitro-inner{padding:0 15px 15px}
+#tec-app .nitro-control{display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px;margin:12px 0 8px;font-size:12px;color:#634e60}
+#tec-app .nitro-control strong{color:#933b72}
+#tec-app #nitroAmount{width:100%;accent-color:#9e437b;cursor:pointer}
+#tec-app #nitroDetails .matter-row{margin:6px 0}
+#tec-app .nitro-balance-note{font-size:11px;line-height:1.55;color:#776578;margin:10px 0}
+@media(max-width:600px){#tec-app .nitrification-section summary{align-items:flex-start;flex-direction:column;gap:5px}}
+
+/* v0.10: research-only contextual panel, collapsed until requested. */
+#tec-app .litter-protocol{margin:14px 0;border:1px solid #dac9d3;border-radius:13px;background:#fbf8f6;overflow:hidden}
+#tec-app .litter-protocol summary{cursor:pointer;padding:13px 15px;font-size:13px;font-weight:750;color:#65364c;display:flex;justify-content:space-between;gap:8px;line-height:1.4;list-style:none}
+#tec-app .litter-protocol summary::-webkit-details-marker{display:none}
+#tec-app .litter-protocol summary small{font-size:9px;letter-spacing:.04em;color:#95647f}
+#tec-app .litter-protocol summary:focus-visible{outline:3px solid #a95088;outline-offset:-3px}
+#tec-app .litter-protocol .lit-inner{padding:0 15px 15px}
+#tec-app .litter-protocol .lit-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;padding:9px 0;border-bottom:1px solid #e7dce3}
+#tec-app .litter-protocol .lit-row strong{white-space:nowrap;color:#7b4163}
+#tec-app .litter-protocol .lit-meta{font-size:11px;color:#776578;line-height:1.55;margin:12px 0}
+@media(max-width:600px){#tec-app .litter-protocol summary{flex-direction:column}}
+
+/* v0.11: botanic catalog is shown on request while staging the initial aquarium. */
+#tec-app .leaf-catalog{margin:9px 0 14px;border:1px solid #d7c5ce;background:#fffcf8;border-radius:12px;padding:12px}
+#tec-app .leaf-catalog-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;color:#583b50;font-size:12px}
+#tec-app .leaf-info{border:0;background:none;font-size:10px;color:#954d7a;text-decoration:underline;cursor:pointer;padding:4px 0}
+#tec-app .leaf-catalog-help{font-size:10px;line-height:1.6;color:#7e707b;margin:9px 0}
+#tec-app .leaf-catalog-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#tec-app .leaf-choice{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;border:1px solid #dfd2d8;background:#fff;border-radius:10px;padding:8px 4px;min-height:116px;cursor:pointer;color:#613e56}
+#tec-app .leaf-choice.selected{border:2px solid #9a487d;background:#fbf0f5;box-shadow:0 0 0 2px #e9cfdf inset}
+#tec-app .leaf-choice svg{width:47px;height:53px}
+#tec-app .leaf-choice span{display:flex;flex-direction:column;text-align:center;gap:2px}
+#tec-app .leaf-choice b{font-size:11px}
+#tec-app .leaf-choice em{font-size:9px;font-weight:400;color:#897888}
+#tec-app .leaf-catalog-extra{margin-top:11px;padding:9px 0;border-top:1px solid #eee3e7}
+#tec-app .leaf-catalog-extra summary{font-size:10px;cursor:pointer;font-weight:700;color:#945c7d}
+#tec-app .leaf-catalog-extra label{display:block;margin-top:11px;font-size:11px;color:#5f4d5d}
+#tec-app .leaf-catalog-extra input{display:block;margin:5px 0;width:100%;padding:10px;border:1px solid #d9ccd3;border-radius:8px;font-size:13px}
+#tec-app .leaf-catalog-extra small{display:block;line-height:1.55;color:#82717c;font-size:10px}
+#tec-app .leaf-catalog-status{font-size:11px;margin-top:8px;color:#7f4e70;line-height:1.5}
+#tec-app .leaf-choice:focus-visible,#tec-app .leaf-info:focus-visible{outline:3px solid #bc73a5;outline-offset:2px}
+@media(max-width:400px){#tec-app .leaf-catalog-choices{grid-template-columns:repeat(2,minmax(0,1fr))}#tec-app .leaf-choice b{font-size:10px}}
+
+/* v0.14: inventario contestuale, coerente con gli altri pannelli del Laboratorio */
+#tec-app #leafInventoryDetails .matter-row{gap:10px;align-items:baseline}
+#tec-app #leafInventoryDetails .matter-row strong{white-space:nowrap}
+#tec-app #leafInventoryDetails .matter-row small{color:#88727d;font-size:10px}
+
+/* v0.15: tracciabilita' di massa solo come riferimento iniziale; nessun andamento biologico */
+#tec-app .leaf-trail{border:1px solid #ded2d8;border-radius:11px;padding:12px;margin:10px 0;background:#fffdfa}
+#tec-app .leaf-trail-heading{font-size:11px;font-weight:750;color:#653950;letter-spacing:.045em;line-height:1.5;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px}
+#tec-app .leaf-trail-heading small{font-size:9px;font-weight:500;color:#90667f}
+#tec-app .leaf-trail .matter-row{font-size:11px;gap:10px;align-items:baseline}
+#tec-app .leaf-trail .matter-row strong{white-space:nowrap;text-align:right}
+#tec-app .leaf-trail p{font-size:10px;line-height:1.58;margin:9px 0 0;color:#6f626b}
+#tec-app .leaf-trail .leaf-trail-caution{color:#79516a}
+@media(max-width:430px){#tec-app .leaf-trail{padding:10px}#tec-app .leaf-trail .matter-row{flex-wrap:wrap}}
+
+/* v0.16: laboratorio metrologico facoltativo, nessuna integrazione nello stato vasca. */
+#tec-app .leaf-mass-form{display:grid;gap:10px;margin:13px 0}
+#tec-app .leaf-mass-form label{display:grid;gap:5px;font-size:11px;line-height:1.45;color:#594756;font-weight:650;min-width:0}
+#tec-app .leaf-mass-form select,#tec-app .leaf-mass-form input{font:inherit;font-size:12px;min-width:0;width:100%;box-sizing:border-box;padding:10px 9px;border-radius:8px;border:1px solid #d9c9d2;background:#fff;color:#453647}
+#tec-app .leaf-mass-form input:focus-visible,#tec-app .leaf-mass-form select:focus-visible{outline:2px solid #a85285;outline-offset:2px}
+#tec-app .leaf-mass-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#tec-app .leaf-mass-grid label:last-child{grid-column:1/-1}
+#tec-app .leaf-mass-clear{border:0;background:none;text-decoration:underline;cursor:pointer;font-size:11px;color:#885577;padding:8px}
+#tec-app .leaf-mass-result{border:1px solid #d8cad2;border-radius:9px;padding:11px;background:#fffdf8;color:#695260;font-size:11px;line-height:1.55;margin:12px 0}
+#tec-app .leaf-mass-result p{margin:7px 0}
+#tec-app .leaf-mass-result .matter-row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+#tec-app .leaf-mass-result .matter-row strong{white-space:nowrap;color:#713e60}
+#tec-app .leaf-mass-origin{font-size:9px;font-weight:750;letter-spacing:.04em;color:#955579}
+#tec-app .leaf-mass-warning{color:#8d4e52}
+@media(max-width:380px){#tec-app .leaf-mass-grid{grid-template-columns:minmax(0,1fr)}#tec-app .leaf-mass-grid label:last-child{grid-column:auto}}
+

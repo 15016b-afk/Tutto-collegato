@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Tutto è collegato — ecosistema acquatico interattivo di Sofia Benfaida."><title>Tutto è collegato · Ecosistema</title><link rel="stylesheet" href="./assets/css/aquarium.css"><link rel="stylesheet" href="./assets/css/platform.css"></head><body><!-- v0.40 web app: baseline v0.39 -->
+
+
+<div id="tec-app" class="tec-app">
+<header class="topbar"><a class="back" href="https://sofiabenfaida.it/tutto-collegato/" target="_top" aria-label="Torna al Playground">← Playground</a><div class="brand"><span class="brand-icon" aria-hidden="true">✺</span><span>TUTTO È <em>COLLEGATO</em><small>Un ecosistema d’acqua dolce</small></span></div><div class="top-actions"><span class="buildtag" id="buildTag">WEB APP 0.40</span><button class="quietbtn" type="button" id="scientificBtn">Limiti scientifici ↗</button></div></header>
+<main class="layout" id="appLayout">
+<aside class="sidebar" aria-label="Strumenti per l'acquario">
+ <div class="sidebar-top"><div class="overline" id="sidebarEyebrow">IL TUO ECOSISTEMA</div><h1 id="sidebarHeading">Crea il tuo<br><em>piccolo mondo.</em></h1><p class="intro" id="sidebarIntro">Un passo alla volta, senza obiettivi né punteggi.</p></div>
+ <nav class="stepnav" id="stepNav" aria-label="Passaggi dell’allestimento">
+  <button type="button" data-go="1"><span class="step-number">1</span><span>La vasca</span></button>
+  <button type="button" data-go="2"><span class="step-number">2</span><span>Fondo e materiali</span></button>
+  <button type="button" data-go="3"><span class="step-number">3</span><span>Prima acqua</span></button>
+  <button type="button" data-go="4"><span class="step-number">4</span><span>Le piante</span></button>
+  <button type="button" data-go="5"><span class="step-number">5</span><span>Acqua e abitanti</span></button>
+  <button type="button" data-go="6"><span class="step-number">6</span><span>Avvio</span></button>
+ </nav>
+ <div class="phasehead"><span>ALLESTIMENTO</span><strong id="phaseLabel">01 / Fondo</strong></div>
+ <div id="buildTools" class="buildtools">
+  <section class="step-panel" data-step="1"><div class="step-kicker">PASSAGGIO 1 / 6</div><h3>Cominciamo dalla vasca.</h3><p class="step-explain">Scegli le sue caratteristiche. Potrai cambiarle fino all’avvio.</p>
+   <div class="formrow"><label for="tankVolume">Capacità</label><select id="tankVolume"><option value="20">20 litri</option><option value="40">40 litri</option><option value="60">60 litri</option></select></div>
+   <div class="formrow"><label for="tankCover">Superficie dell’acqua</label><select id="tankCover"><option value="open">Vasca aperta</option><option value="ventilated">Copertura ventilata</option></select></div>
+   <div class="formrow"><label for="waterProfile">Provenienza dell’acqua</label><select id="waterProfile"><option value="conditioned">Acqua di rete trattata · da verificare</option><option value="remineralized">Osmosi remineralizzata · da verificare</option><option value="blend">Miscela idonea · da verificare</option></select></div>
+   <button class="next-action" data-next="2">Prepara il fondo <span>→</span></button>
+  </section>
+  <section class="step-panel" data-step="2" hidden><div class="step-kicker">PASSAGGIO 2 / 6</div><h3>Dai forma al fondale.</h3><p class="step-explain">Seleziona un materiale e <b>trascina il dito o il mouse sulla vasca</b>. Per una distribuzione precisa usa la vista dall’alto.</p>
+   <div class="toolgroup"><div class="grouptitle">Materiale del fondo <button class="info-dot" data-info="substrate" aria-label="Informazioni sul fondo">ⓘ</button></div><div class="toolgrid" id="materials"><button data-tool="sand" class="tool active"><i style="--dot:#d9c09a"></i>Sabbia</button><button data-tool="gravel" class="tool"><i style="--dot:#918ca3"></i>Ghiaia</button><button data-tool="aquasoil" class="tool"><i style="--dot:#6b5149"></i>Aquasoil</button><button data-tool="fertile" class="tool"><i style="--dot:#6b433b"></i>Base fertile</button></div><div class="subtools"><label for="brushThickness">Spessore locale <b id="brushThicknessValue">2,0 cm</b></label><input id="brushThickness" type="range" min="0.5" max="8" step="0.5" value="2"><p class="hint">Un clic copre circa il 10% del fondale. Trascina per estendere la zona.</p></div></div>
+   <div class="toolgroup"><div class="grouptitle">Rocce, legni e foglie <button class="info-dot" data-info="materials" aria-label="Informazioni sugli elementi naturali">ⓘ</button></div><p class="step-explain compact">Seleziona un elemento, poi tocca la vasca per posizionarlo.</p><div class="toolgrid" id="objects"><button class="tool" data-tool="rock">◒ Roccia</button><button class="tool" data-tool="wood">♧ Legno</button><button class="tool" data-tool="leaf" id="chooseLeafTool" aria-controls="leafCatalog" aria-expanded="false">♢ Scegli una foglia</button></div>
+   <div class="leaf-catalog" id="leafCatalog" hidden aria-label="Catalogo botanico delle foglie">
+    <div class="leaf-catalog-heading"><strong>Quale foglia vuoi aggiungere?</strong><button type="button" class="leaf-info" id="leafCatalogHelp">Fonti e caratteristiche ↗</button></div>
+    <p class="leaf-catalog-help">Scegli una specie, poi tocca la vasca per posizionarla. Non servono dati da compilare.</p>
+    <div class="leaf-catalog-choices" role="group" aria-label="Seleziona una specie di foglia">
+     <button type="button" class="leaf-choice" data-leaf-species="quercus_robur" aria-pressed="false"><svg viewBox="0 0 68 80" aria-hidden="true"><path d="M34 70Q28 58 17 58Q5 49 15 40Q3 31 18 27Q14 13 28 16Q34 2 42 16Q57 12 51 29Q65 32 53 42Q60 51 47 57Q43 66 34 70Z" fill="#b77746" stroke="#7f4d3a" stroke-width="2.7"/><path d="M34 70V24M34 49L21 36M34 45L49 32" stroke="#7f4d3a" stroke-width="2" fill="none"/></svg><span><b>Quercia comune</b><em>Quercus robur</em></span></button>
+     <button type="button" class="leaf-choice" data-leaf-species="alnus_glutinosa" aria-pressed="false"><svg viewBox="0 0 68 80" aria-hidden="true"><path d="M34 69Q14 65 10 47Q3 27 16 16Q32 1 49 18Q65 36 54 54Q47 66 34 69Z" fill="#b88b49" stroke="#785837" stroke-width="2.5"/><path d="M34 69Q33 40 34 17M34 47L16 32M34 44L51 29M34 58L49 48" stroke="#785837" stroke-width="2" fill="none"/></svg><span><b>Ontano nero</b><em>Alnus glutinosa</em></span></button>
+    </div>
+    <details class="leaf-catalog-extra"><summary>Dati del campione (facoltativi)</summary><label for="leafDryMass">Massa secca iniziale ipotizzata, in grammi</label><input id="leafDryMass" type="number" step="any" min="0" inputmode="decimal" placeholder="Non specificata"><small>Se inserisci un valore, sarà una <b>tua ipotesi dichiarata</b>, non una pesata effettuata dal gioco. Non attiva automaticamente decomposizione, ammoniaca o nitrificazione.</small></details>
+    <div class="leaf-catalog-status" id="leafCatalogStatus" role="status">Seleziona una specie per preparare lo strumento.</div>
+   </div></div>
+   <button class="next-action" data-next="3">Aggiungi la prima acqua <span>→</span></button>
+  </section>
+  <section class="step-panel" data-step="3" hidden><div class="step-kicker">PASSAGGIO 3 / 6</div><h3>Un po’ d’acqua.</h3><p class="step-explain">Aggiungi il primo livello d’acqua: la vasca sarà pronta per collocare le piante.</p><button class="next-action" id="partialWater">Aggiungi la prima acqua <span>→</span></button><p class="step-explain compact" id="partialStatus">Prima di questa operazione puoi ancora modificare il fondo.</p><button class="ghost-next" data-next="4">Vai alle piante →</button></section>
+  <section class="step-panel" data-step="4" hidden><div class="step-kicker">PASSAGGIO 4 / 6</div><h3>Fai spazio alla vita.</h3><p class="step-explain">Scegli una pianta, poi <b>tocca il punto della vasca</b> in cui vuoi collocarla. Le piante galleggianti saranno aggiunte nelle successive versioni.</p>
+   <div class="toolgroup"><div class="grouptitle">Piante e alghe <button class="info-dot" data-info="plants" aria-label="Informazioni botaniche">ⓘ</button></div><div class="toolgrid" id="plants"><button class="tool" data-tool="echinodorus">✳ Rosetta</button><button class="tool" data-tool="cryptocoryne">✿ Cryptocoryne</button><button class="tool" data-tool="ceratophyllum">❃ Ceratofillo</button><button class="tool" data-tool="marimo">● Marimo (alga)</button></div><p class="hint">Illustrazioni provvisorie; caratteristiche e identificazioni da verificare.</p></div>
+   <button class="next-action" data-next="5">Completa l’acqua <span>→</span></button>
+  </section>
+  <section class="step-panel" data-step="5" hidden><div class="step-kicker">PASSAGGIO 5 / 6</div><h3>Introduci gli abitanti.</h3><p class="step-explain">Completa il riempimento e scegli quali abitanti introdurre. Puoi anche iniziare con sole piante e aggiungere animali più avanti.</p>
+   <button class="next-action" id="fullWater">Completa il riempimento <span>→</span></button>
+   <div class="toolgroup"><div class="grouptitle">Abitanti facoltativi <button class="info-dot" data-info="animals" aria-label="Informazioni sugli organismi">ⓘ</button></div><div class="fauna-row"><button class="secondary" id="addShrimp">+ Neocaridina</button><button class="secondary" data-add-fauna="helena">+ Helena</button><button class="secondary" data-add-fauna="melanoides">+ Melanoides</button><button class="secondary" data-add-fauna="amularis">+ Amularis rosa</button></div><p class="hint">La Physa arriva con le piante.</p><p class="hint">Le introduzioni manuali sono facoltative.</p></div>
+   <button class="ghost-next" data-next="6">Vai al riepilogo e avvio →</button>
+  </section>
+  <section class="step-panel" data-step="6" hidden><div class="step-kicker">PASSAGGIO 6 / 6</div><h3>Il mondo è pronto?</h3><p class="step-explain">Puoi tornare ai passaggi precedenti e cambiare tutto. Dopo l’avvio, il fondale e gli abitanti iniziali rimarranno definiti.</p><div class="recap" id="buildRecap">Controllo dell’allestimento...</div><button class="launch" id="launchBtn">Avvia ecosistema <span>↗</span></button><p class="hint">Non è un obiettivo da vincere: osserva ciò che accade nel tempo.</p></section>
+ </div>
+ <div id="afterTools" class="aftertools" hidden><div class="step-kicker">ECOSISTEMA AVVIATO</div><h3>Ora osserva.</h3><p class="step-explain">Aggiungi un abitante oppure scegli una cura. Usa +1 giorno per vedere cosa cambia.</p><div class="toolgroup"><div class="grouptitle">Introduci abitanti</div><p id="matureState" class="hint"></p><div class="fauna-row"><button class="secondary" id="lateShrimp">+ Neocaridina</button><button class="secondary" data-add-fauna="helena">+ Helena</button><button class="secondary" data-add-fauna="melanoides">+ Melanoides</button><button class="secondary" data-add-fauna="amularis">+ Amularis rosa</button></div></div><div class="toolgrid"><button class="tool" id="feedBtn">◌ Alimenta</button><button class="tool" id="trimBtn">✂ Pota</button><button class="tool" id="removeLeafBtn">♢ Rimuovi foglia</button><button class="tool" id="topoffBtn">♧ Rabbocca</button></div><p class="hint">Puoi aggiungere abitanti anche durante la maturazione. Il ciclo dell’azoto è uno scenario esplorativo: non equivale a una misurazione della vasca.</p></div>
+ <div class="sidebar-footer"><button class="textbtn" id="resetBtn">↺ Nuova vasca</button><span>Salvataggio locale <span id="saveStatus">·</span></span></div>
+</aside>
+<section class="world" aria-label="Acquario e osservazione">
+ <div class="world-head"><div><div class="overline" id="worldEyebrow">IL TUO MONDO, UN PASSO ALLA VOLTA</div><h2 id="worldTitle">Un mondo ancora da costruire<span class="period">.</span></h2><p id="worldHint">Scegli un materiale, disegna il fondo e aggiungi gli elementi.</p></div><div class="switcher"><button id="obsTab" class="active">Osservazione</button><button id="labTab">Laboratorio</button></div></div>
+ <div class="command-strip" aria-live="polite"><div><span class="command-symbol" aria-hidden="true">✦</span><span><small>STRUMENTO ATTIVO</small><strong id="currentToolName">Sabbia</strong><em id="currentToolInstruction">Trascina nella vasca per disegnare</em></span></div><button class="command-inspect" type="button" id="inspectToolBtn">⌕ Esamina un elemento</button></div>
+ <div class="tank-wrap"><div class="tank-top"><span class="tanklabel">VISTA FRONTALE <small id="frontInstruction">↘ trascina per disegnare</small></span><span class="tankstatus" id="tankStatus">VASCA ASCIUTTA</span></div><div class="lens-tools"><button class="secondary" id="lensToggle" aria-pressed="false">Ingrandisci</button><button class="secondary" id="microToggle" aria-pressed="false">Microfauna</button><button class="secondary" id="atlasBtn">Bestiario</button></div><div class="tank-frame"><svg id="frontSvg" class="tank-svg" role="img" aria-label="Vista frontale interattiva dell’acquario" viewBox="0 0 1000 561" preserveAspectRatio="xMidYMid meet"></svg><div id="tankOverlay" class="tank-overlay" aria-hidden="true"><span>✳</span><strong>Qui prenderà forma il tuo ecosistema</strong><small>Scegli il fondo a sinistra e trascina nella vasca.</small></div><div class="tank-frame-corner tl"></div><div class="tank-frame-corner tr"></div></div>
+  <section id="lensPane" hidden><button id="lensClose" class="secondary">Chiudi lente</button><p>Tocca la vasca per spostare la lente. In Microfauna puoi toccare gli organismi del campione illustrativo.</p><label>Osservazione <select id="lensMode"><option value="scene">Dettaglio della vasca</option><option value="sample">Campione illustrativo di microfauna</option></select></label><label>Ingrandimento <select id="lensPower"><option value="3">3×</option><option value="6">6×</option></select></label><svg id="lensView" role="img" aria-label="Dettaglio della zona osservata"></svg><div id="lensAnimals"></div><div id="sampleTray"></div><button class="secondary" id="lensMicro">Tavole della microfauna</button></section><div class="bottomscene"><div><div class="tanklabel dark">VISTA DALL’ALTO <small>↘ gli stessi elementi, dall’alto</small></div><svg id="topSvg" class="top-svg" viewBox="0 0 1000 205" role="img" aria-label="Vista zenitale sincronizzata dell’acquario"></svg></div><div class="timebox"><div class="overline">TEMPO SIMULATO</div><div class="timebig"><span id="dayNum">00</span> <small>giorni</small></div><div class="timebtns"><button data-days="1">+1</button><button data-days="3">+3</button><button data-days="7">+7</button></div><p class="water-budget-mini" id="waterBudgetMini" aria-live="polite">Bilancio dell’acqua disponibile dopo l’avvio.</p><p class="fine">Puoi avanzare soltanto dopo l’avvio. Nessun tempo passa a pagina chiusa.</p></div></div></div>
+ <div class="observation-brief" id="observationBrief" role="status" aria-live="polite"><div class="brief-icon" aria-hidden="true">◎</div><div><strong id="briefTitle">Nessuna trasformazione simulata</strong><p id="briefText">Qui compariranno solo informazioni sostenute dai dati effettivamente disponibili.</p></div><button type="button" id="viewConnectionsBtn">Scopri i collegamenti →</button></div>
+ <div class="lower-actions"><button type="button" id="snapshotBtn" class="lower-btn">▧ Salva un'istantanea</button><button id="viewJournalBtn" class="lower-btn" type="button">☷ Diario <span id="journalCount">0 voci</span></button><button id="viewLabBtn" class="lower-btn" type="button">⌕ Schede e dati</button><span class="prototype-note">Versione 0.38 · ossigeno e relazioni ecologiche</span></div>
+ <div class="legend"><span><i class="legdot" style="background:#8eae7d"></i> piante</span><span><i class="legdot" style="background:#da8a67"></i> invertebrati</span><span class="legend-tail">Nessun punteggio · nessun equilibrio imposto</span></div>
+</section>
+<aside class="inspector" id="inspectDrawer" aria-label="Scheda di osservazione" hidden><div class="drawer-title"><span>QUADERNO DI OSSERVAZIONE</span><button id="closeInspector" class="modalclose" type="button" aria-label="Chiudi scheda">×</button></div><div class="mini-stats"><div><small>CAPACITÀ</small><strong id="capacityStat">20 <span>L</span></strong></div><div><small>ACQUA</small><strong id="waterStat">—</strong></div><div><small>ABITANTI INTRODOTTI</small><strong id="lifeStat">0</strong></div></div><div id="inspectPanel" class="inspect-panel"><div class="inspect-empty"><span>✳</span><b>Guarda più da vicino</b><p>Seleziona un elemento nella vasca.</p></div></div><div id="labPanel" class="lab-panel" hidden><div class="overline">LABORATORIO / MODELLO</div><h4>Che cosa sappiamo davvero?</h4><div class="labrow"><span>pH / GH / KH</span><strong>Non misurati</strong></div><div class="labrow"><span>NH₄⁺ / NH₃ / NO₂⁻ / NO₃⁻</span><strong>Non misurati</strong></div><div class="labrow"><span>Ossigeno disciolto</span><strong>Non misurato</strong></div><div class="labrow"><span>Comunità microbiche</span><strong>Non identificate</strong></div><p class="scientific-note">Le relazioni qui sotto sono <b>possibili secondo la letteratura</b>: non significano che i processi siano stati osservati o misurati nella tua vasca. Non sono ancora implementate cinetiche biologiche validate.</p>
+ <section class="material-section" aria-label="Bilancio fisico dell’acqua"><div class="lab-relations-title">ACQUA NEL TEMPO <small>SCENARIO NON CALIBRATO</small></div><div id="waterBudgetDetails" class="material-accounts"></div><div class="tracer-panel"><div class="lab-relations-title">EVAPORAZIONE E SOLUTI <small>CALCOLO TEORICO</small></div><div id="tracerDetails"></div><button type="button" class="secondary full" id="tracerEvidenceBtn">Perché il rapporto cambia? ↗</button></div><button class="secondary full" id="waterEvidenceBtn" type="button">Studio, ipotesi e limiti ↗</button></section>
+ <details class="litter-protocol" id="oxygenReferenceSection"><summary>Quanto ossigeno può sciogliersi nell’acqua? <small>RIFERIMENTO FISICO · NON MISURA</small></summary><div class="lit-inner"><p class="scientific-note">Valori USGS di <b>ossigeno a saturazione</b> in acqua dolce, a 760 mmHg e a temperature dichiarate. Non sono letture del nostro acquario: temperatura, pressione, fotosintesi e consumo reale di ossigeno non sono misurati.</p><div id="oxygenReferenceDetails" class="material-accounts"></div><button class="secondary full" id="oxygenReferenceEvidenceBtn" type="button">Tabella, metodi e limiti ↗</button></div></details>
+<details class="nitrification-section" id="nitrificationSection">
+ <summary>Come si trasforma l'azoto ammoniacale? <small>REAZIONE TEORICA · NON MISURA</small></summary>
+ <div class="nitro-inner">
+  <p class="scientific-note">La nitrificazione non è un processo automatico in questa vasca: ossigeno, alcalinità e comunità microbiche non sono ancora misurati. Esplora soltanto i rapporti di reazione pubblicati dall'EPA.</p>
+  <label class="nitro-control" for="nitroAmount">Quantità di riferimento da convertire <strong id="nitroAmountLabel">1 mg di N</strong></label>
+  <input id="nitroAmount" type="range" min="0.5" max="5" step="0.5" value="1" aria-label="Massa ipotetica di azoto ammoniacale in milligrammi"/>
+  <div id="nitroDetails" class="material-accounts" aria-live="polite"></div>
+  <button class="secondary full" type="button" id="nitroEvidenceBtn">Leggi reazioni, fonte e limiti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol leaf-measure" id="leafMassProtocolSection">
+ <summary>Misurare la massa di una foglia <small>ANALISI DI CAMPIONI · NON VASCA</small></summary>
+ <div class="lit-inner"><p class="scientific-note">Confronta <b>due pesate della stessa base</b> su un campione esterno o in uno scenario dichiarato. La massa non recuperata non indica automaticamente quanto C, N o nutrienti siano entrati nell'acqua.</p>
+  <form id="leafMassProtocolForm" class="leaf-mass-form" autocomplete="off">
+   <label for="massSpecies">Materiale studiato<select id="massSpecies" name="species"><option value="alnus_glutinosa">Alnus glutinosa · ontano nero</option><option value="quercus_robur">Quercus robur · quercia comune</option></select></label>
+   <label for="massOrigin">Origine dei valori<select id="massOrigin" name="origin"><option value="scenario">Scenario ipotetico esplicito</option><option value="external">Due pesate di un campione indipendente dalla vasca</option></select></label>
+   <label for="massBasis">Base analitica, identica per entrambe le pesate<select id="massBasis" name="basis"><option value="DM">DM · massa secca</option><option value="AFDM">AFDM · massa secca senza ceneri</option></select></label>
+   <div class="leaf-mass-grid">
+    <label for="massInitial">Massa iniziale (g)<input id="massInitial" name="initialG" type="number" min="0" step="any" inputmode="decimal" placeholder="Nessun dato preimpostato" required></label>
+    <label for="massRemaining">Massa recuperata (g)<input id="massRemaining" name="remainingG" type="number" min="0" step="any" inputmode="decimal" placeholder="Nessun dato preimpostato" required></label>
+    <label for="massDays">Intervallo (giorni)<input id="massDays" name="days" type="number" min="1" step="1" inputmode="numeric" placeholder="Giorni interi" required></label>
+   </div>
+   <button type="submit" class="secondary full">Confronta le pesate</button>
+   <button type="reset" class="leaf-mass-clear">Cancella i valori inseriti</button>
+  </form>
+  <div id="leafMassProtocolResult" class="leaf-mass-result" aria-live="polite"><p>Inserisci le due masse e la durata per calcolare la differenza. Non viene registrato alcun valore nella vasca.</p></div>
+  <button type="button" class="secondary full" id="leafMassProtocolEvidenceBtn">Metodo, fonti e limiti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="replicateObservationsSection">
+ <summary>Repliche della lettiera: che cosa è realmente recuperato? <small>SCENARIO O CAMPIONI ESTERNI · NON SIMULAZIONE</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note">Confronta <b>almeno due unità campionarie indipendenti</b> con masse iniziali e recuperate sulla <b>medesima base analitica</b>. Seleziona la provenienza: uno scenario non è una misura; una pesata esterna non è una misura della vasca virtuale. <b>La differenza non viene attribuita automaticamente ai decompositori.</b></p>
+  <form id="replicateObservationsForm" class="leaf-mass-form" autocomplete="off">
+   <label for="repSpecies">Specie del materiale
+    <select id="repSpecies"><option value="alnus_glutinosa">Alnus glutinosa · ontano nero</option><option value="quercus_robur">Quercus robur · quercia comune</option></select>
+   </label>
+   <label for="repOrigin">Provenienza delle coppie
+    <select id="repOrigin"><option value="scenario">Scenario ipotetico, non osservato</option><option value="external">Pesate di campioni esterni indipendenti</option></select>
+   </label>
+   <label for="repBasis">Base analitica comune
+    <select id="repBasis"><option value="DM">DM · massa secca</option><option value="AFDM">AFDM · massa priva di ceneri</option></select>
+   </label>
+   <label for="repDays">Durata comune (giorni interi)
+    <input id="repDays" type="number" min="1" max="36500" step="1" inputmode="numeric" placeholder="Non precompilato" required>
+   </label>
+   <label for="repRows">Una riga per replica: massa iniziale (g); massa recuperata (g)
+    <textarea id="repRows" rows="4" spellcheck="false" placeholder="Per esempio, formato: massa iniziale; massa recuperata&#10;Inserisci almeno due righe, senza valori precompilati" required></textarea>
+   </label>
+   <p class="matter-muted">Separatore: punto e virgola oppure TAB. Decimali con virgola o punto. Per AFDM sono indispensabili preparazioni e campioni comparabili: la determinazione delle ceneri è distruttiva e non equivale a pesare due volte lo stesso campione intatto.</p>
+   <button class="secondary full" type="submit">Verifica le repliche</button><button class="leaf-mass-clear" type="reset">Cancella il confronto</button>
+  </form>
+  <div id="replicateObservationsResult" class="leaf-mass-result" aria-live="polite"><p>Non sono state fornite pesate. Nessun processo della vasca viene attivato.</p></div>
+  <button type="button" class="secondary full" id="replicateEvidenceBtn">Fonti, qualità delle misure e limiti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="biologicalGateSection">
+ <summary>Perché la decomposizione della vasca non avanza ancora? <small>VERIFICA DI EVIDENZA</small></summary>
+ <div class="lit-inner">
+  <p><b>Processo biologico temporale: NON ATTIVO.</b> I salti +1/+3/+7 giorni non attribuiscono perdita di massa, consumo di ossigeno, crescita di microbi o rilascio di azoto.</p>
+  <div class="matter-row"><span>Masse iniziali e successive comparabili nella vasca</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Ossigeno e condizioni locali effettivamente misurati</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Origine e attività dei decompositori confermate</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Destinazioni verificabili del materiale non recuperato</span><strong>Non disponibili</strong></div>
+  <p class="matter-muted">Disponibili invece: registro di introduzioni/rimozioni fisiche, confronti aritmetici su campioni esterni o ipotetici, composizione iniziale di letteratura e scenari idrici separati. La mancanza di dati non è convertita in zero.</p>
+ </div>
+</details>
+<details class="litter-protocol" id="retrievalSeriesSection">
+ <summary>Serie di recuperi della lettiera <small>PIÙ DATE · REPliche INDIPENDENTI · DATI DICHIARATI</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note"><b>Una fotografia per ogni data di recupero, non un'animazione della decomposizione.</b> Inserisci almeno due campioni indipendenti per data e almeno due date. Una riga rappresenta una singola unità campionaria ritirata a quel giorno, non la stessa foglia pesata e reimmersa. Scenari e pesate esterne restano separati dalla vasca virtuale.</p>
+  <form id="retrievalSeriesForm" class="leaf-mass-form" autocomplete="off">
+   <label for="seriesSpecies">Specie botanica del confronto
+    <select id="seriesSpecies"><option value="alnus_glutinosa">Alnus glutinosa · ontano nero</option><option value="quercus_robur">Quercus robur · quercia comune</option></select>
+   </label>
+   <label for="seriesOrigin">Provenienza delle osservazioni
+    <select id="seriesOrigin"><option value="scenario">Scenario ipotetico dichiarato</option><option value="external">Pesate dichiarate di campioni esterni</option></select>
+   </label>
+   <label for="seriesBasis">Base analitica condivisa
+    <select id="seriesBasis"><option value="DM">DM · massa secca</option><option value="AFDM">AFDM · massa priva di ceneri</option></select>
+   </label>
+   <label for="seriesRows">Una riga per unità: giorno; massa iniziale (g); massa recuperata (g)
+    <textarea id="seriesRows" rows="5" spellcheck="false" placeholder="Formato: giorno; iniziale; recuperata&#10;Due o più unità indipendenti per ciascun giorno; nessun dato precompilato" required></textarea>
+   </label>
+   <p class="matter-muted">Usa <b>;</b> o TAB per separare i campi; virgola/punto per i decimali. Non mischiare esperimenti, siti, trattamenti, gruppi di controllo, preparazioni o basi DM/AFDM differenti. Per AFDM, la stima iniziale richiede unità di riferimento comparabili perché l'incenerimento è distruttivo. I dati non vengono conservati nel salvataggio della vasca.</p>
+   <button type="submit" class="secondary full">Confronta i giorni campionati</button>
+   <button type="reset" class="leaf-mass-clear">Cancella la serie</button>
+  </form>
+  <div id="retrievalSeriesResult" class="leaf-mass-result" aria-live="polite"><p>Nessun campione dichiarato. Non sono prodotti valori né curve di decomposizione.</p></div>
+  <button type="button" class="secondary full" id="retrievalSeriesEvidenceBtn">Metodologia, fonti e limiti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="microbialProvenanceSection">
+ <summary>Origine dei microbi e processi verificabili <small>ELEMENTI REALI DELLA VASCA · LIMITI DEL MODELLO</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note"><b>Da dove potrebbero arrivare i decompositori?</b> Il registro segue esclusivamente materiali e organismi che hai introdotto e l'acqua effettivamente aggiunta. Le vie indicate sono possibilità documentate in altri sistemi; <b>nessuna comunità microbica è stata misurata qui</b>. Un materiale presente non dimostra che contenga microbi vitali.</p>
+  <div id="microbialProvenanceResult" aria-live="polite"><p>Origini da valutare in base all'allestimento.</p></div>
+  <button type="button" class="secondary full" id="microbialProvenanceEvidenceBtn">Fonti, trasferibilità e condizioni mancanti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="processEvidenceSection">
+ <summary>Condizioni per attivare i processi <small>STATO DELLA VASCA · SCENARI · MISURE MANCANTI</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note"><b>Quali prove abbiamo davvero?</b> La presenza di acqua o di una foglia è uno stato dell’interfaccia, non una misura della sua attività biologica. Qui ogni prerequisito è classificato secondo la sua origine, senza attribuire nuovi valori alla vasca.</p>
+  <div id="processEvidenceResult" aria-live="polite"><p>Nessuna misura biologica disponibile.</p></div>
+  <button type="button" class="secondary full" id="processEvidenceSourcesBtn">Metodi, fonti e condizioni per il modello ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="litterProtocolSection"><summary>Il peso di una foglia nel tempo <small>PROTOCOLLO DOCUMENTATO · NON VASCA</small></summary><div class="lit-inner"><p class="scientific-note">Ricalcolo di un esperimento pubblicato su sacchetti contenenti inizialmente <b>4,85 g di foglie secche di Quercus robur</b> in due stagni. Sono dati sperimentali di riferimento, non dati della tua foglia.</p><div id="litterProtocolDetails" aria-live="polite"></div><button type="button" class="secondary full" id="litterProtocolEvidenceBtn">Come è verificato? ↗</button></div></details>
+<details class="litter-protocol" id="earlyLeachingSection"><summary>I primi giorni delle foglie <small>MISURE PUBBLICATE · NON VASCA</small></summary>
+<div class="lit-inner"><p class="scientific-note">La perdita iniziale di massa dipende dalla specie e dalla preparazione delle foglie. I dati qui presentati <b>non fanno diminuire</b> la massa delle foglie nella tua vasca.</p><div id="earlyLeachingDetails" class="material-accounts" aria-live="polite"></div>
+<button type="button" class="secondary full" id="earlyLeachingEvidenceBtn">Metodi, specie e fonti ↗</button></div></details>
+<div class="material-section" aria-label="Registro dei materiali osservabili"><div class="lab-relations-title">COSA È ENTRATO E COSA RESTA</div><p class="scientific-note">Per ora possiamo verificare le <b>azioni</b>, non il peso delle sostanze o quanto azoto contengano.</p><div id="materialAccounts" class="material-accounts"></div><button type="button" class="secondary full" id="materialLedgerBtn">Apri il registro delle provenienze ↗</button></div>
+ <section class="literature-section" aria-label="Confronto scientifico sulle foglie">
+ <div class="lab-relations-title">UNA FOGLIA NEL TEMPO <small>CONFRONTO BIBLIOGRAFICO</small></div>
+ <p class="scientific-note">Due stagni reali studiati con foglie identificate di <i>Quercus robur</i>. Le curve sono <b>calcoli da coefficienti misurati in quei contesti</b>, non una misura della foglia illustrata nella tua vasca.</p>
+ <div id="leafReference" class="reference-plot" aria-live="polite">Aggiungi una foglia durante l'allestimento per consultare il confronto.</div>
+ <button type="button" class="secondary full" id="leafEvidenceBtn">Leggi studio, formule e limiti ↗</button>
+ </section>
+<section class="leaf-elements-section" id="leafInventorySection" aria-label="Contenuto elementare di riferimento delle foglie in vasca">
+ <div class="lab-relations-title">FOGLIE INTRODOTTE <small>INVENTARIO DI RIFERIMENTO</small></div>
+ <p class="scientific-note">Per le specie del catalogo con una <b>massa secca ipotizzata</b>, confronta l'azoto e il carbonio con analisi pubblicate su foglie appena raccolte. <b>Non sono misure della tua vasca.</b></p>
+ <div id="leafInventoryDetails" class="material-accounts" aria-live="polite"></div>
+ <div class="leaf-trail" aria-label="Verifica della provenienza delle foglie"><div class="leaf-trail-heading">TRACCIABILITÀ DELLE FOGLIE <small>NON È DECOMPOSIZIONE SIMULATA</small></div><div id="leafMatterLedgerDetails" aria-live="polite"></div></div>
+ <button type="button" class="secondary full" id="leafInventoryEvidenceBtn">Fonte, campioni e limiti di questi calcoli ↗</button>
+</section>
+<section class="leaf-elements-section" aria-label="Azoto contenuto nelle foglie: dati sperimentali">
+ <div class="lab-relations-title">AZOTO NELLA MATERIA ORGANICA <small>RIFERIMENTO MISURATO</small></div>
+ <p class="scientific-note">Quanto azoto può essere <b>contenuto</b> in una foglia? Dati di laboratorio per <i>Quercus serrata</i>, non per qualunque foglia scelta nel catalogo: è una specie distinta.</p>
+ <div id="leafElementDetails" class="material-accounts"></div>
+ <button type="button" class="secondary full" id="leafElementEvidenceBtn">Fonte e limiti dei dati sull’azoto ↗</button>
+ </section>
+ <div class="lab-relations-title">LA RETE DI QUESTA VASCA <span id="connectionCount">0 collegamenti</span></div><div id="relationList" class="relation-list"><p class="empty-relations">Introduci elementi nell'allestimento per esplorare le relazioni documentate.</p></div>
+ <button class="secondary full" id="modelInfoBtn">Fonti e limiti del modello</button></div><div class="diary"><div class="diary-title"><span>DIARIO</span><button id="journalBtn" class="textbtn">Apri tutto ↗</button></div><div id="journalPreview" class="journal-preview"></div></div></aside>
+</main>
+<div class="mobile-quick-nav" aria-label="Navigazione rapida"><button type="button" id="jumpToolsBtn">☷ Strumenti</button><button type="button" id="jumpTankBtn">◉ Vasca</button></div>
+<footer class="pagefooter">TUTTO È COLLEGATO · <span>prototipo 0.38 · modello esplorativo</span><a href="https://sofiabenfaida.it/tutto-collegato/" target="_top">Torna al progetto ↗</a></footer>
+<div id="modalLayer" class="modal-layer" hidden><div class="modal-shade" data-close></div><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button id="closeModal" class="modalclose" aria-label="Chiudi">×</button><div id="modalContents"></div></section></div><div id="liveAnnounce" class="sr-only" role="status" aria-live="polite"></div>
+</div><script src="./src/legacy/00-nitrogen-reference.js"></script>
+<script src="./src/legacy/01-temporal-reference.js"></script>
+<script src="./src/legacy/02-water-budget.js"></script>
+<script src="./src/legacy/03-tracer.js"></script>
+<script src="./src/legacy/04-leaf-elements.js"></script>
+<script src="./src/legacy/05-leaf-inventory.js"></script>
+<script src="./src/legacy/06-leaf-matter-ledger.js"></script>
+<script src="./src/legacy/07-nitrification.js"></script>
+<script src="./src/legacy/08-leaf-mass-protocol.js"></script>
+<script src="./src/legacy/09-early-leaching.js"></script>
+<script src="./src/legacy/10-oxygen-reference.js"></script>
+<script src="./src/legacy/11-oxygen-cycle.js"></script>
+<script src="./src/legacy/12-gravimetric.js"></script>
+<script src="./src/legacy/13-replicate-observations.js"></script>
+<script src="./src/legacy/14-retrieval-series.js"></script>
+<script src="./src/legacy/15-microbial-provenance.js"></script>
+<script src="./src/legacy/16-microbial-entry-history.js"></script>
+<script src="./src/legacy/17-process-evidence.js"></script>
+<script src="./src/legacy/18-water-litter-interface.js"></script>
+<script src="./src/legacy/19-litter-dynamics.js"></script>
+<script src="./src/legacy/20-trophic-web.js"></script>
+<script src="./src/legacy/21-eco-cycle-n.js"></script>
+<script src="./src/legacy/22-daily-rules.js"></script>
+<script src="./src/legacy/23-substrate-rendering.js"></script>
+<script src="./src/legacy/24-bestiary-art.js"></script>
+<script src="./src/legacy/25-game.js"></script>
+<section class="tec-platform" aria-label="Gestione della vasca"><details><summary>Salvataggi e trasferimento della vasca</summary><p>Il salvataggio automatico resta su questo browser. Scarica una copia per trasferirla su un altro dispositivo o importarla dal vecchio sito.</p><div class="tec-platform-actions"><button id="tec-export" type="button">Esporta vasca JSON</button><button id="tec-import" type="button">Importa vasca JSON</button><input id="tec-save-file" type="file" accept=".json,application/json" hidden></div><p id="tec-platform-status" role="status" aria-live="polite"></p></details><small>Web App v0.40 · Migrazione tecnica della v0.39</small></section>
+<script src="./src/platform/save-tools.js"></script></body></html>

@@ -1,0 +1,12 @@
+/* v0.19 - visual audit of possible origins; strictly no biomass or process prediction. */
+#tec-app .micro-provenance-caption{font-size:11px;color:#746775;line-height:1.6;margin:0 0 12px}
+#tec-app .micro-provenance-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;align-items:start;padding:11px 0;border-bottom:1px solid #e9dfe6}
+#tec-app .micro-provenance-row strong{font-size:12px;color:#4f364a;display:block}
+#tec-app .micro-provenance-row small{color:#766977;font-size:10px;line-height:1.45;display:block;margin-top:3px}
+#tec-app .micro-provenance-count{white-space:nowrap;font-variant-numeric:tabular-nums;color:#98517c;font-weight:700;font-size:11px;text-align:right}
+#tec-app .micro-provenance-status{border:1px solid #dccada;border-radius:9px;background:#fff8fb;padding:11px 12px;margin:12px 0;font-size:11px;line-height:1.55;color:#704f65}
+#tec-app .micro-processes{display:grid;gap:8px;margin-top:11px}
+#tec-app .micro-process{border:1px solid #e4dbe1;border-radius:9px;padding:10px;background:#fffdfa}
+#tec-app .micro-process strong{display:block;font-size:12px;color:#563c52}
+#tec-app .micro-process span{display:block;font-size:10px;margin-top:4px;color:#8d4b74;font-weight:700}
+#tec-app .micro-process p{font-size:10px;line-height:1.5;margin-top:5px}

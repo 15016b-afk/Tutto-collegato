@@ -1,0 +1,12 @@
+/* v0.18: osservazioni di recupero puntuali, senza curve e senza stime cinetiche */
+#tec-app .series-table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+#tec-app .series-time-table{border-collapse:collapse;width:100%;font-size:11px;margin:12px 0}
+#tec-app .series-time-table th,#tec-app .series-time-table td{padding:9px 5px;border-bottom:1px solid #e9dfe5;text-align:right;font-variant-numeric:tabular-nums}
+#tec-app .series-time-table th:first-child,#tec-app .series-time-table td:first-child{text-align:left}
+#tec-app .series-time-table caption{text-align:left;font-size:11px;margin-bottom:8px;color:#71616e}
+#tec-app .series-time-table [data-warning="true"]{color:#a13c55;font-weight:700}
+#tec-app .series-dots{margin:10px 0 13px;padding:10px;border:1px solid #e5dce2;background:#fffcf8;border-radius:10px;overflow:hidden}
+#tec-app .series-dots svg{width:100%;height:auto;display:block;max-height:330px}
+#tec-app .series-dots-caption{font-size:10px;color:#736570;line-height:1.55;margin-top:9px}
+#tec-app .series-meta{font-size:11px;font-weight:700;color:#82406d;margin-bottom:8px;line-height:1.6}
+@media(max-width:480px){#tec-app .series-time-table{font-size:10px}#tec-app .series-time-table th,#tec-app .series-time-table td{padding:7px 3px}#tec-app .series-dots{padding:6px}}

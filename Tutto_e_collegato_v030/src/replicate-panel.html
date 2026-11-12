@@ -1,0 +1,38 @@
+<details class="litter-protocol" id="replicateObservationsSection">
+ <summary>Repliche della lettiera: che cosa è realmente recuperato? <small>SCENARIO O CAMPIONI ESTERNI · NON SIMULAZIONE</small></summary>
+ <div class="lit-inner">
+  <p class="scientific-note">Confronta <b>almeno due unità campionarie indipendenti</b> con masse iniziali e recuperate sulla <b>medesima base analitica</b>. Seleziona la provenienza: uno scenario non è una misura; una pesata esterna non è una misura della vasca virtuale. <b>La differenza non viene attribuita automaticamente ai decompositori.</b></p>
+  <form id="replicateObservationsForm" class="leaf-mass-form" autocomplete="off">
+   <label for="repSpecies">Specie del materiale
+    <select id="repSpecies"><option value="alnus_glutinosa">Alnus glutinosa · ontano nero</option><option value="quercus_robur">Quercus robur · quercia comune</option></select>
+   </label>
+   <label for="repOrigin">Provenienza delle coppie
+    <select id="repOrigin"><option value="scenario">Scenario ipotetico, non osservato</option><option value="external">Pesate di campioni esterni indipendenti</option></select>
+   </label>
+   <label for="repBasis">Base analitica comune
+    <select id="repBasis"><option value="DM">DM · massa secca</option><option value="AFDM">AFDM · massa priva di ceneri</option></select>
+   </label>
+   <label for="repDays">Durata comune (giorni interi)
+    <input id="repDays" type="number" min="1" max="36500" step="1" inputmode="numeric" placeholder="Non precompilato" required>
+   </label>
+   <label for="repRows">Una riga per replica: massa iniziale (g); massa recuperata (g)
+    <textarea id="repRows" rows="4" spellcheck="false" placeholder="Per esempio, formato: massa iniziale; massa recuperata&#10;Inserisci almeno due righe, senza valori precompilati" required></textarea>
+   </label>
+   <p class="matter-muted">Separatore: punto e virgola oppure TAB. Decimali con virgola o punto. Per AFDM sono indispensabili preparazioni e campioni comparabili: la determinazione delle ceneri è distruttiva e non equivale a pesare due volte lo stesso campione intatto.</p>
+   <button class="secondary full" type="submit">Verifica le repliche</button><button class="leaf-mass-clear" type="reset">Cancella il confronto</button>
+  </form>
+  <div id="replicateObservationsResult" class="leaf-mass-result" aria-live="polite"><p>Non sono state fornite pesate. Nessun processo della vasca viene attivato.</p></div>
+  <button type="button" class="secondary full" id="replicateEvidenceBtn">Fonti, qualità delle misure e limiti ↗</button>
+ </div>
+</details>
+<details class="litter-protocol" id="biologicalGateSection">
+ <summary>Perché la decomposizione della vasca non avanza ancora? <small>VERIFICA DI EVIDENZA</small></summary>
+ <div class="lit-inner">
+  <p><b>Processo biologico temporale: NON ATTIVO.</b> I salti +1/+3/+7 giorni non attribuiscono perdita di massa, consumo di ossigeno, crescita di microbi o rilascio di azoto.</p>
+  <div class="matter-row"><span>Masse iniziali e successive comparabili nella vasca</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Ossigeno e condizioni locali effettivamente misurati</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Origine e attività dei decompositori confermate</span><strong>Non disponibili</strong></div>
+  <div class="matter-row"><span>Destinazioni verificabili del materiale non recuperato</span><strong>Non disponibili</strong></div>
+  <p class="matter-muted">Disponibili invece: registro di introduzioni/rimozioni fisiche, confronti aritmetici su campioni esterni o ipotetici, composizione iniziale di letteratura e scenari idrici separati. La mancanza di dati non è convertita in zero.</p>
+ </div>
+</details>

@@ -1,0 +1,14 @@
+initial setup 0 0 0
+substrate setup 0 0 0
+partial setup 0 0.28 0
+plant setup 0 0.28 2
+full setup 0 1 2
+launch running 0 1 2
+fauna running 0 1 6
+advance running 3 0.969323739398653 5
+lens parent tank-wrap
+invariants {'singleTank': True, 'waterWithinBounds': True, 'closedAfterStart': True, 'dayIsInteger': True, 'noInventedRates': True, 'modelLiteratureBounded': True, 'leafCatalogIntegrity': True, 'noInventedLeafMass': True, 'snapshotsOnlyRealDays': True, 'materialLedgerMatchesVisible': True, 'formalMassBalance': True, 'leafLiteratureReference': True, 'tracerConservation': True, 'leafElementChemistry': True, 'leafSpeciesStockReference': True, 'leafMatterLedgerReference': True, 'leafMassProtocol': True, 'replicateObservationProtocol': True, 'retrievalSeriesProtocol': True, 'microbialProvenanceAudit': True, 'microbialEntryHistory': True, 'processEvidenceGates': True, 'waterLitterInterface': True, 'waterLitterSequential': True, 'waterLitterNoInventedFlux': True, 'litterDynamics': True, 'litterNoInventedNitrogen': True, 'leafHistoryReference': True, 'litterProtocol': True, 'earlyLeachingSpecies': True, 'oxygenReference': True, 'nitrificationStoichiometry': True, 'waterBalanceEngine': True, 'waterBudgetInvariant': True, 'ecoCycleSelfTest': True, 'ecoCycleBalance': True, 'trophicEngine': True, 'oxygenEngine': True, 'oxygenBalance': True, 'oxygenSequential': True, 'oxygenWaterMatch': True, 'trophicLedger': True, 'ecoCycleSequential': True}
+import ok 3
+errors []
+mobile widths {'body': 390, 'viewport': 390, 'root': 390}
+mobile errors []

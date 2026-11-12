@@ -1,0 +1,15 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+import re,json
+root=Path(__file__).resolve().parents[1];html=(root/'index.html').read_text()
+html=re.sub(r'<link rel="stylesheet" href="([^"]+)">',lambda m:'<style>'+ (root/m[1]).read_text()+'</style>',html)
+html=re.sub(r'<script src="([^"]+)"></script>',lambda m:'<script>'+ (root/m[1]).read_text()+'</script>',html)
+with sync_playwright() as p:
+ b=p.chromium.launch(args=['--no-sandbox']);page=b.new_page(viewport={'width':1440,'height':950});errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.set_content(html,wait_until='load');page.wait_for_function('window.__TEC_TEST__ && document.getElementById("tec-app").__tecMounted',timeout=5000)
+ def state():return page.evaluate('window.__TEC_TEST__.getState()')
+ def click(sel):page.evaluate('s=>document.querySelector(s).click()',sel)
+ def scene(id,x,y):page.evaluate('''([id,x,y])=>{const s=document.getElementById(id),pt=s.createSVGPoint();pt.x=x;pt.y=y;const p=pt.matrixTransform(s.getScreenCTM());s.dispatchEvent(new PointerEvent('pointerdown',{clientX:p.x,clientY:p.y,bubbles:true}));window.dispatchEvent(new PointerEvent('pointerup'));}''',[id,x,y])
+ def step(name):print(name,state()['phase'],state()['day'],state()['waterLevel'],len(state()['objects']),flush=True)
+ step('initial');click('[data-next="2"]');scene('topSvg',250,90);scene('topSvg',500,120);assert any(state()['cells']);step('substrate');click('[data-next="3"]');click('#partialWater');step('partial');click('[data-tool="echinodorus"]');scene('frontSvg',450,490);step('plant');assert any(o['kind']=='echinodorus' for o in state()['objects']);click('[data-next="5"]');click('#fullWater');step('full');click('[data-next="6"]');click('#launchBtn');step('launch');assert state()['phase']=='running';click('#lateShrimp');click('[data-step="5"] [data-add-fauna="helena"]');click('[data-step="5"] [data-add-fauna="melanoides"]');click('[data-step="5"] [data-add-fauna="amularis"]');step('fauna');click('[data-days="3"]');step('advance');assert state()['day']==3;click('#lensToggle');print('lens parent',page.locator('#lensPane').evaluate('(e)=>e.parentElement.className')); print('invariants',page.evaluate('window.__TEC_TEST__.invariants()'))
+ backup=state();page.evaluate('window.__TEC_TEST__.reset()');page.evaluate('(s)=>window.TECTransfer.importState(s)',backup);assert state()['day']==backup['day'];print('import ok',state()['day']);page.screenshot(path=str(root/'docs/desktop-running.png'));print('errors',errors);assert not errors
+ m=b.new_page(viewport={'width':390,'height':844},is_mobile=True,has_touch=True);m.on('pageerror',lambda e:errors.append(str(e)));m.set_content(html,wait_until='load');m.wait_for_function('window.__TEC_TEST__',timeout=5000);m.screenshot(path=str(root/'docs/mobile-preview.png'));print('mobile widths',m.evaluate('({body:document.body.scrollWidth,viewport:innerWidth,root:document.getElementById("tec-app").scrollWidth})'));print('mobile errors',errors);b.close()
